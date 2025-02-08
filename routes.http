@@ -1,0 +1,68 @@
+POST http://localhost:3333/equipamento
+Content-Type: application/json
+
+{
+    "titulo": "Placa-Mãe",
+    "preco": 899.90,
+    "modelo": "TUFGame",
+    "serie": "B550M",
+    "prefixo": "plus",
+    "fabricante": "Asus"
+}
+
+###
+
+GET http://localhost:3333/equipamentos?search=Coller
+
+###
+
+GET http://localhost:3333/equipamentos?search=Processador
+
+###
+
+GET http://localhost:3333/equipamentos?search=Placa-Mãe
+
+###
+
+GET http://localhost:3333/equipamentos
+
+###
+
+PUT http://localhost:3333/equipamentos/a84a5c54-9abf-4da4-8acf-349a99616e95
+Content-Type: application/json
+
+{
+    "titulo": "Fonte",
+    "preco": 579.90,
+    "modelo": "MAG",
+    "serie": "850W",
+    "prefixo": "Plus Gold",
+    "fabricante": "MSI"
+}
+
+###
+
+PUT http://localhost:3333/equipamentos/e7c49ddb-8fbe-468e-8d9b-cf76190e5721
+Content-Type: application/json
+
+{
+    "titulo": "Processador",
+    "preco": 799.90,
+    "modelo": "Ryzen 5",
+    "serie": "4600",
+    "prefixo": "G",
+    "fabricante": "Intel"
+}
+
+###
+
+DELETE http://localhost:3333/equipamentos/a84a5c54-9abf-4da4-8acf-349a99616e95
+
+###
+
+PATCH http://localhost:3333/equipamentos/a84a5c54-9abf-4da4-8acf-349a99616e95
+Content-Type: application/json
+
+{
+    "preco": 559.90
+}
